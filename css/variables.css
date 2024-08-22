@@ -1,0 +1,11 @@
+/*COLORS */
+:root {
+    --primary: #1e1e1e;
+    --dark : #121212;
+    --pure : #ffffff;
+    --gray : #1d1d1d;
+    --lgray : #323232; 
+    --hgray : #454545;
+    --mild : #b9b8b8;
+    --grad : linear-gradient(37deg, rgba(2,0,36,1) 0%, rgba(166,7,180,1) 43%, rgba(0,255,235,1) 100%);
+}

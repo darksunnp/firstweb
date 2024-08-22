@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './utilities.css';
+@import './variables.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-smooth: auto;
+    scrollbar-width: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat' , sans-serif;
+    color: var(--pure);
+    min-height: 100vh;
+    scrollbar-width: none;
+}
+header{
+    background: linear-gradient(135deg , rgba(0,0,0,1),rgba(0,0,0,0.2)),
+    url(../raw/v5n22xGyNNHLzSnSArbrVH-1200-80.webp);
+    background-size: cover;
+    font-family: 'Poppins' , sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    color: var(--pure);
+}
+main{
+    background: linear-gradient(135deg , rgba(0,0,0,1),rgba(0,0,0,0.2)),
+    url(../raw/v5n22xGyNNHLzSnSArbrVH-1200-80.webp);
+    background-size: cover;
+}
+.navigation a{
+    text-decoration: none;
+    color: var(--pure);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+.navigation a:hover , .navigation a.active {
+    background: var(--lgray);
+    color: var(--pure);
+}
+
+main{
+    padding-top: 150px;
+}
+
+.Social div{
+    border: 2px solid var(--pure);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+@keyframes moveIn {
+    from {
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.Social svg path{
+    fill: var(--pure);
+}
+.Social div:hover{
+    transition: all 0.5s ease-in-out;
+    background-color: var(--hgray);
+}
+.links{
+    position: relative;
+}
+.Social{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 1px solid var(--gray);
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 70vh;
+}
+.intro{
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.links .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 120px;
+    min-height: calc(100vh - 150px);
+}
+.vectorimg{
+    opacity: 90%;
+}
+.vectorresize{
+    width: 400px;
+    height: 370px;
+}
+.links .content .vectorimg img{
+    animation: astromove 10s ease-in-out infinite;
+}
+@keyframes astromove {
+    50%{
+        transform: translateY(10px) rotate(-20deg) scale(0.9);
+    }
+}
+.strip{
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.realbody{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    background-color: var(--dark);
+    color: var(--pure);
+}
+section.realbody{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+}
+.history{
+    background-color: var(--dark);
+    padding: 15px;
+    
+}
+footer {
+    font-weight: 500;
+    background: var(--dark);
+    padding: 30px 0;
+}
+
+footer > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+ }
+
+ footer .copyright span {
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+footer .copyright img {
+    height: 5px;
+}
+
+footer h1 {
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+footer h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--pure);
+}
+
+footer ul {
+    list-style-type: none;
+}
+footer li {
+    margin-right: 10px;
+    list-style-type: none;
+}
+
+footer ul li:nth-child(even) {
+    margin: 10px 0;
+ }
+
+ footer ul li a {
+    color: var(--mild);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: var(--pure);
+ }
+
+ footer .footer-socials a {
+    margin-right: 20px;
+    font-size: 22px;
+    color: var(--mild);
+}
+
+footer .footer-socials a:hover {
+    color: var(--pure);
+}
